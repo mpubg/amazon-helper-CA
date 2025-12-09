@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       SecretKey: process.env.SECRET_KEY,
       PartnerTag: process.env.PARTNER_TAG,
       PartnerType: 'Associates',
-      Marketplace: 'www.amazon.com',
+      Marketplace: 'www.amazon.ca',
     };
 
     const requestParameters = {
