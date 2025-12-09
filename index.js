@@ -11,7 +11,7 @@ const commonParameters = {
   SecretKey: "MX5Yec7stDgLlFRTG2nPoeFelz8VQQnAKDmGtw8s",
   PartnerTag: "shreejagann0f-20", // e.g. mytag-20
   PartnerType: "Associates",
-  Marketplace: "www.amazon.com", // Change for your region
+  Marketplace: "www.amazon.ca", // Change for your region
 };
 
 app.get("/lookup", async (req, res) => {
@@ -50,7 +50,7 @@ const commonParameters = {
   SecretKey: "MX5Yec7stDgLlFRTG2nPoeFelz8VQQnAKDmGtw8s",
   PartnerTag: "shreejagann0f-20", // e.g. mytag-20
   PartnerType: "Associates",
-  Marketplace: "www.amazon.com", // Change for your region
+  Marketplace: "www.amazon.ca", // Change for your region
 };
 
 app.get("/lookup", async (req, res) => {
