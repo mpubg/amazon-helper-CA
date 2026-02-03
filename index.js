@@ -21,9 +21,9 @@ export default async function handler(req, res) {
     const AmazonPaapi = require("amazon-paapi");
 
     const commonParameters = {
-      AccessKey: process.env.PAAPI_ACCESS_KEY,
-      SecretKey: process.env.PAAPI_SECRET_KEY,
-      PartnerTag: process.env.PAAPI_PARTNER_TAG, // your .ca tag
+      AccessKey: "AKPACHPP681756975474",
+      SecretKey: "MX5Yec7stDgLlFRTG2nPoeFelz8VQQnAKDmGtw8s",
+      PartnerTag: "shreejagann0f-20",
       PartnerType: "Associates",
       Marketplace: "www.amazon.ca",
     };
