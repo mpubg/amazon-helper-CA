@@ -29,6 +29,7 @@ app.get("/lookup", async (req, res) => {
         "ItemInfo.ProductInfo",
         "ItemInfo.ContentInfo",
         "ItemInfo.ManufactureInfo",
+        "ItemInfo.TradeInInfo",
       ],
     };
 
@@ -71,6 +72,7 @@ app.get("/lookup", async (req, res) => {
         "ItemInfo.ProductInfo",
         "ItemInfo.ContentInfo",
         "ItemInfo.ManufactureInfo",
+        "ItemInfo.TradeInInfo",
       ],
     };
 
