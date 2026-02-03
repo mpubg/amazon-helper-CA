@@ -26,7 +26,7 @@ app.get("/lookup", async (req, res) => {
         "OffersV2.Listings.Availability",
         "OffersV2.Listings.Condition",
         "OffersV2.Listings.IsBuyBoxWinner",
-        "OffersV2.Listings.MerchantInfo"
+        "OffersV2.Listings.MerchantInfo",
         "ItemInfo.Features",
         "ItemInfo.ByLineInfo",
         "Offers.Listings.Price",
@@ -71,7 +71,7 @@ app.get("/lookup", async (req, res) => {
         "OffersV2.Listings.Availability",
         "OffersV2.Listings.Condition",
         "OffersV2.Listings.IsBuyBoxWinner",
-        "OffersV2.Listings.MerchantInfo"
+        "OffersV2.Listings.MerchantInfo",
         "ItemInfo.Features",
         "ItemInfo.ByLineInfo",
         "Offers.Listings.Price",
