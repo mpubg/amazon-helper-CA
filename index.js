@@ -20,13 +20,8 @@ app.get("/lookup", async (req, res) => {
     const requestParameters = {
       ItemIds: [asin],
       Resources: [
-        "ItemInfo.Title",
-        "ItemInfo.Features",
-        "ItemInfo.ByLineInfo",
-        "Offers.Listings.Price",
-        "Images.Primary.Large",
-        "Images.Variants.Large",
-        "ParentASIN",
+        "Images.Primary.Small","ItemInfo.Title","ItemInfo.Features",
+"Offers.Summaries.HighestPrice","ParentASIN",
       ],
     };
 
@@ -60,13 +55,8 @@ app.get("/lookup", async (req, res) => {
     const requestParameters = {
       ItemIds: [asin],
       Resources: [
-        "ItemInfo.Title",
-        "ItemInfo.Features",
-        "ItemInfo.ByLineInfo",
-        "Offers.Listings.Price",
-        "Images.Primary.Large",
-        "Images.Variants.Large",
-        "ParentASIN",
+        "Images.Primary.Small","ItemInfo.Title","ItemInfo.Features",
+"Offers.Summaries.HighestPrice","ParentASIN",
       ],
     };
 
