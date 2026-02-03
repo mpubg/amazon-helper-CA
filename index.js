@@ -1,39 +1,32 @@
-// api/lookup.js
-function isValidAsin(asin) {
-  return typeof asin === "string" && /^[A-Z0-9]{10}$/i.test(asin.trim());
-}
+<<<<<<< HEAD
+const express = require("express");
+const AmazonPaapi = require("amazon-paapi");
 
-export default async function handler(req, res) {
-  const asin = (req.query.asin || "").trim();
+const app = express();
+const port = process.env.PORT || 3000;
 
-  if (!isValidAsin(asin)) {
-    return res.status(400).json({ error: "Valid ASIN is required" });
-  }
+// Amazon PA-API config
+const commonParameters = {
+  AccessKey: "AKPACHPP681756975474",
+  SecretKey: "MX5Yec7stDgLlFRTG2nPoeFelz8VQQnAKDmGtw8s",
+  PartnerTag: "shreejagann0f-20", // e.g. mytag-20
+  PartnerType: "Associates",
+  Marketplace: "www.amazon.ca", // Change for your region
+};
 
-  const missing = ["PAAPI_ACCESS_KEY", "PAAPI_SECRET_KEY", "PAAPI_PARTNER_TAG"].filter(
-    (k) => !process.env[k]
-  );
-  if (missing.length) {
-    return res.status(500).json({ error: "Missing env vars", missing });
-  }
-
+app.get("/lookup", async (req, res) => {
   try {
-    const AmazonPaapi = require("amazon-paapi");
-
-    const commonParameters = {
-      AccessKey: "AKPACHPP681756975474",
-      SecretKey: "MX5Yec7stDgLlFRTG2nPoeFelz8VQQnAKDmGtw8s",
-      PartnerTag: "shreejagann0f-20",
-      PartnerType: "Associates",
-      Marketplace: "www.amazon.ca",
-    };
-
+    const asin = req.query.asin;
     const requestParameters = {
       ItemIds: [asin],
-      ItemIdType: "ASIN",
-      LanguagesOfPreference: ["en_CA"],
       Resources: [
         "ItemInfo.Title",
+        "Images.Primary.Large",
+        "OffersV2.Listings.Price",
+        "OffersV2.Listings.Availability",
+        "OffersV2.Listings.Condition",
+        "OffersV2.Listings.IsBuyBoxWinner",
+        "OffersV2.Listings.MerchantInfo"
         "ItemInfo.Features",
         "ItemInfo.ByLineInfo",
         "Offers.Listings.Price",
@@ -43,19 +36,56 @@ export default async function handler(req, res) {
     };
 
     const data = await AmazonPaapi.GetItems(commonParameters, requestParameters);
-    return res.status(200).json(data);
+    res.json(data);
   } catch (err) {
-    const msg =
-      err?.Errors?.[0]?.Message ||
-      err?.response?.data?.Errors?.[0]?.Message ||
-      err?.message ||
-      "PA-API request failed";
-
-    const code =
-      err?.Errors?.[0]?.Code ||
-      err?.response?.data?.Errors?.[0]?.Code ||
-      undefined;
-
-    return res.status(500).json({ error: msg, code });
+    res.status(500).json({ error: err.message });
   }
-}
+});
+
+app.listen(port, () => console.log(`✅ Helper running on port ${port}`));
+=======
+const express = require("express");
+const AmazonPaapi = require("amazon-paapi");
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Amazon PA-API config
+const commonParameters = {
+  AccessKey: "AKPACHPP681756975474",
+  SecretKey: "MX5Yec7stDgLlFRTG2nPoeFelz8VQQnAKDmGtw8s",
+  PartnerTag: "shreejagann0f-20", // e.g. mytag-20
+  PartnerType: "Associates",
+  Marketplace: "www.amazon.ca", // Change for your region
+};
+
+app.get("/lookup", async (req, res) => {
+  try {
+    const asin = req.query.asin;
+    const requestParameters = {
+      ItemIds: [asin],
+      Resources: [
+        "ItemInfo.Title",
+        "Images.Primary.Large",
+        "OffersV2.Listings.Price",
+        "OffersV2.Listings.Availability",
+        "OffersV2.Listings.Condition",
+        "OffersV2.Listings.IsBuyBoxWinner",
+        "OffersV2.Listings.MerchantInfo"
+        "ItemInfo.Features",
+        "ItemInfo.ByLineInfo",
+        "Offers.Listings.Price",
+        "Images.Primary.Large",
+        "Images.Variants.Large",
+      ],
+    };
+
+    const data = await AmazonPaapi.GetItems(commonParameters, requestParameters);
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.listen(port, () => console.log(`✅ Helper running on port ${port}`));
+>>>>>>> 078fab08141f5b50e05903da324652377f7777d6
