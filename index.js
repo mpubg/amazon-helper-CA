@@ -19,8 +19,15 @@ app.get("/lookup", async (req, res) => {
     const asin = req.query.asin;
     const requestParameters = {
       ItemIds: [asin],
-      Resources: ["Images.Primary.Small","ItemInfo.Title","ItemInfo.Features","Offers.Summaries.HighestPrice","ParentASIN",
-                 ],
+      Resources: [
+        "ItemInfo.Title",
+        "ItemInfo.Features",
+        "ItemInfo.ByLineInfo",
+        "Offers.Listings.Price",
+        "Images.Primary.Large",
+        "Images.Variants.Large",
+        "ItemInfo.ProductInfo",
+      ],
     };
 
     const data = await AmazonPaapi.GetItems(commonParameters, requestParameters);
@@ -52,8 +59,15 @@ app.get("/lookup", async (req, res) => {
     const asin = req.query.asin;
     const requestParameters = {
       ItemIds: [asin],
-      Resources: ["Images.Primary.Small","ItemInfo.Title","ItemInfo.Features","Offers.Summaries.HighestPrice","ParentASIN",
-                 ],
+      Resources: [
+        "ItemInfo.Title",
+        "ItemInfo.Features",
+        "ItemInfo.ByLineInfo",
+        "Offers.Listings.Price",
+        "Images.Primary.Large",
+        "Images.Variants.Large",
+        "ItemInfo.ProductInfo",
+      ],
     };
 
     const data = await AmazonPaapi.GetItems(commonParameters, requestParameters);
