@@ -25,7 +25,10 @@ export default async function handler(req, res) {
         "ItemInfo.Features",
         "ItemInfo.ByLineInfo",
         "Offers.Listings.Price",
-        "Offers.Summaries.HighestPrice", "VariationSummary.Price.HighestPrice",  "VariationSummary.Price.LowestPrice",  "VariationSummary.VariationDimension"
+        "Offers.Summaries.HighestPrice", 
+        "VariationSummary.Price.HighestPrice",  
+        "VariationSummary.Price.LowestPrice",  
+        "VariationSummary.VariationDimension"
       ],
     };
 
