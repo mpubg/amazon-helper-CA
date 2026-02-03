@@ -26,6 +26,7 @@ app.get("/lookup", async (req, res) => {
         "Offers.Listings.Price",
         "Images.Primary.Large",
         "Images.Variants.Large",
+        "Offers.Summaries.HighestPrice",
       ],
     };
 
@@ -65,6 +66,7 @@ app.get("/lookup", async (req, res) => {
         "Offers.Listings.Price",
         "Images.Primary.Large",
         "Images.Variants.Large",
+        "Offers.Summaries.HighestPrice",
       ],
     };
 
