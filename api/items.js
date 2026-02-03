@@ -28,7 +28,8 @@ export default async function handler(req, res) {
         "ItemInfo.ProductInfo",
         "ItemInfo.ContentInfo",
         "ItemInfo.ManufactureInfo",
-        "ItemInfo.TradeInInfo"
+        "ItemInfo.TradeInInfo",
+        "OffersV2.Listings.Price"
       ],
     };
 
