@@ -18,10 +18,8 @@ export default async function handler(req, res) {
 
     const requestParameters = {
       ItemIds: [asin],
-      Resources: [
-        "Images.Primary.Small","ItemInfo.Title","ItemInfo.Features",
-"Offers.Summaries.HighestPrice","ParentASIN""
-      ],
+      Resources: ["Images.Primary.Small","ItemInfo.Title","ItemInfo.Features","Offers.Summaries.HighestPrice","ParentASIN",
+                 ],
     };
 
     const data = await GetItems(commonParameters, requestParameters);
