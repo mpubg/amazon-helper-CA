@@ -20,16 +20,16 @@ export default async function handler(req, res) {
       ItemIds: [asin],
       Resources: [
         "Images.Primary.Large",
+        "Images.Variants.Large",
+        "ItemInfo.Title",
+        "ItemInfo.Features",
+        "ItemInfo.ByLineInfo",
+        "Offers.Listings.Price",
         "OffersV2.Listings.Price",
         "OffersV2.Listings.Availability",
         "OffersV2.Listings.Condition",
         "OffersV2.Listings.IsBuyBoxWinner",
         "OffersV2.Listings.MerchantInfo"
-        "Images.Variants.Large",
-        "ItemInfo.Title",
-        "ItemInfo.Features",
-        "ItemInfo.ByLineInfo",
-        "Offers.Listings.Price"
       ],
     };
 
