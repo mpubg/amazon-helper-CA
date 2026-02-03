@@ -29,7 +29,8 @@ export default async function handler(req, res) {
         "OffersV2.Listings.Availability",
         "OffersV2.Listings.Condition",
         "OffersV2.Listings.IsBuyBoxWinner",
-        "OffersV2.Listings.MerchantInfo"
+        "OffersV2.Listings.MerchantInfo",
+        "ItemInfo.ProductInfo"
       ],
     };
 
