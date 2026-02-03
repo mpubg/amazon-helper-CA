@@ -26,7 +26,10 @@ app.get("/lookup", async (req, res) => {
         "Offers.Listings.Price",
         "Images.Primary.Large",
         "Images.Variants.Large",
-        "Offers.Summaries.HighestPrice","VariationSummary.Price.HighestPrice",  "VariationSummary.Price.LowestPrice",  "VariationSummary.VariationDimension"
+        "Offers.Summaries.HighestPrice",
+        "VariationSummary.Price.HighestPrice",  
+        "VariationSummary.Price.LowestPrice",  
+        "VariationSummary.VariationDimension",
       ],
     };
 
@@ -66,7 +69,10 @@ app.get("/lookup", async (req, res) => {
         "Offers.Listings.Price",
         "Images.Primary.Large",
         "Images.Variants.Large",
-        "Offers.Summaries.HighestPrice", "VariationSummary.Price.HighestPrice",  "VariationSummary.Price.LowestPrice",  "VariationSummary.VariationDimension"
+        "Offers.Summaries.HighestPrice", 
+        "VariationSummary.Price.HighestPrice",  
+        "VariationSummary.Price.LowestPrice",  
+        "VariationSummary.VariationDimension",
       ],
     };
 
