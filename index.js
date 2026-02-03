@@ -26,7 +26,7 @@ app.get("/lookup", async (req, res) => {
         "Offers.Listings.Price",
         "Images.Primary.Large",
         "Images.Variants.Large",
-        "VariationSummary",
+        "ParentASIN",
       ],
     };
 
@@ -66,7 +66,7 @@ app.get("/lookup", async (req, res) => {
         "Offers.Listings.Price",
         "Images.Primary.Large",
         "Images.Variants.Large",
-        "VariationSummary",
+        "ParentASIN",
       ],
     };
 
