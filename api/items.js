@@ -30,7 +30,8 @@ export default async function handler(req, res) {
         "OffersV2.Listings.Condition",
         "OffersV2.Listings.IsBuyBoxWinner",
         "OffersV2.Listings.MerchantInfo",
-        "ItemInfo.ProductInfo"
+        "ItemInfo.ProductInfo",
+        "ParentASIN"
       ],
     };
 
